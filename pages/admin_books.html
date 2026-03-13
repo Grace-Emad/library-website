@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Complete Book List</title>
+</head>
+<body>
+    <header>
+        <h1>Library Administration</h1>
+        <nav>
+            <a href="../index.html">Home</a> | 
+            <a href="#">Manage Books</a> |
+            <a href="add_book.html">Add New Book</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Available & Borrowed Books</h2>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Clean Code</td>
+                    <td>Robert C. Martin</td>
+                    <td>Technology</td>
+                    <td>
+                        <form action="#" method="POST">
+                            <input type="hidden" name="book_id" value="1">
+                            <button type="submit">Delete Book</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>The Pragmatic Programmer</td>
+                    <td>Andrew Hunt</td>
+                    <td>Technology</td>
+                    <td>
+                        <form action="#" method="POST">
+                            <input type="hidden" name="book_id" value="2">
+                            <button type="submit">Delete Book</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
