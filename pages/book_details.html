@@ -1,21 +1,41 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Book Details</title>
+    <meta charset="utf-8">
+    <title>Book Details</title>
 </head>
 
-<body> 
-    
-<h1>programming advices</h1>
+<body>
 
-<p>Author: <b>Dr.Mohammed Abu-Hadhoud</b></p>
-<p>Category: <b>Programming</b></p>
-<p>Description: A book that explains the basics of programming and helps learners develop logical thinking and problem-solving skills.</p>
-<p>Status: Available</p>
+    <header>
+        <h1>Online Library</h1>
+        <nav>
+            <a href="../index.html">Home</a> |
+            <a href="search_books.html">Search Books</a> |
+            <a href="book_details.html">Book Details</a> |
+            <a href="user_borrowed.html">My Borrowed Books</a>
+        </nav>
+    </header>
 
-<div id="borrow-section">
-<input type="button" value="Borrowing the book" onclick="location.href='confirm_borrow.html'">
-</div>
+    <main>
+
+    <h1>programming advices</h1>
+
+    <p>Author: <b>Dr.Mohammed Abu-Hadhoud</b></p>
+    <p>Category: <b>Programming</b></p>
+    <p>Description: A book that explains the basics of programming and helps learners develop logical thinking and
+        problem-solving skills.</p>
+    <p>Status: Available</p>
+
+    <div id="borrow-section">
+        <form action="#">
+            <button type="submit">Borrowing the book</button>
+        </form>
+    </div>
+
+    </main>
 
 </body>
+
 </html>
