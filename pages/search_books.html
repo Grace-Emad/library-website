@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Books - Online Library</title>
+</head>
+<body>
+    <header>
+        <h1>Online Library</h1>
+        <nav>
+            <a href="../index.html">Home</a> | 
+            <a href="#">Search Books</a> |
+            <a href="user_borrowed.html">My Borrowed Books</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Search for a Book</h2>
+            <form action="#" method="GET">
+                <label for="search_query">Search: </label>
+                <input type="text" id="search_query" name="search_query" placeholder="Type here...">
+                
+                <label for="search_by">By: </label>
+                <select id="search_by" name="search_by">
+                    <option value="title">Title</option>
+                    <option value="author">Author</option>
+                    <option value="category">Category</option>
+                </select>
+                
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Search Results</h2>
+            <div class="results-container">                
+                <article>
+                    <h3>Clean Code</h3>
+                    <p><strong>Author:</strong> Robert C. Martin</p>
+                    <p><strong>Category:</strong> Technology</p>
+                    <p><strong>Status:</strong> <span>Available</span></p>
+                    <button type="button">Borrow Book</button>
+                </article>
+                <article>
+                    <h3>The Pragmatic Programmer</h3>
+                    <p><strong>Author:</strong> Andrew Hunt</p>
+                    <p><strong>Category:</strong> Technology</p>
+                    <p><strong>Status:</strong> <span>Not Available (Borrowed)</span></p>
+                    <button type="button" disabled>Borrow Book</button>
+                </article>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
