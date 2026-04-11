@@ -2,55 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Online Library - Add Book</title>
+    <title>Add Book</title>
 </head>
 
 <body>
-    <header>
-        <h1>Library Administration</h1>
-        <nav>
-            <a href="../index.html">Home</a> |
-            <a href="admin_books.html">Manage Books</a> |
-            <a href="#">Add New Book</a>
-        </nav>
-    </header>
 
-    <main>
-        <h1>Add New Book</h1>
-        <p>Please fill the information of the book.</p>
+<h1>Online Library</h1>
+<h2>Add New Book</h2>
 
-        <form action="#">
+<form id="addBookForm">
 
-            <label>Book ID</label><br>
-            <input type="text" name="bookID" required>
-            <br><br>
+    <label>Book Name</label><br>
+    <input type="text" name="bookName" required><br><br>
 
-            <label>Book Name</label><br>
-            <input type="text" name="bookName" required>
-            <br><br>
+    <label>Author</label><br>
+    <input type="text" name="author" required><br><br>
 
-            <label>Author</label><br>
-            <input type="text" name="author" required>
-            <br><br>
+    <label>Category</label><br>
+    <select name="category" required>
+        <option value="">Choose Category</option>
+        <option>Fiction</option>
+        <option>Science</option>
+        <option>History</option>
+        <option>Technology</option>
+    </select><br><br>
 
-            <label>Category</label><br>
-            <select name="category" required>
-                <option value="">Choose Category</option>
-                <option value="Fiction">Fiction</option>
-                <option value="Science">Science</option>
-                <option value="History">History</option>
-                <option value="Technology">Technology</option>
-            </select>
-            <br><br>
+    <label>Description</label><br>
+    <textarea name="description" required></textarea><br><br>
 
-            <label>Description</label><br>
-            <textarea name="description" rows="4" required></textarea>
-            <br><br>
+    <button type="submit">Add Book</button>
 
-            <button type="submit">Add Book</button>
+</form>
 
-        </form>
-    </main>
+<script src="admin.js"></script>
 
 </body>
 </html>
