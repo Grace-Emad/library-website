@@ -73,3 +73,52 @@ if (editForm) {
         alert("Book updated successfully ✏️");
     });
 }
+
+
+function displayAdminBooks() {
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+
+  let tableBody = document.getElementById("tableBody");
+  tableBody.innerHTML = "";
+
+  books.forEach((book, index) => {
+    tableBody.innerHTML += `
+      <tr>
+        <td>${book.title}</td>
+        <td>${book.author}</td>
+        <td>${book.category}</td>
+
+        <td>
+          <button onclick="deleteBook(${index})">Delete</button>
+          <button onclick="editBook(${index})">Edit</button>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+function deleteBook(index) {
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+  books.splice(index, 1); 
+  localStorage.setItem("books", JSON.stringify(books));
+ displayAdminBooks(); 
+}
+function editBook(index) {
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+  let book = books[index];
+  document.getElementById("title").value = book.title;
+  document.getElementById("author").value = book.author;
+  document.getElementById("category").value = book.category;
+  localStorage.setItem("editIndex", index);
+}
+function saveEdit() {
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+  let index = parseInt(localStorage.getItem("editIndex"));
+  books[index].title = document.getElementById("title").value;
+  books[index].author = document.getElementById("author").value;
+  books[index].category = document.getElementById("category").value;
+  localStorage.setItem("books", JSON.stringify(books));
+  displayAdminBooks();
+}
+
+displayAdminBooks();
