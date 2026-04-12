@@ -95,6 +95,8 @@ ul {
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
+    box-sizing: border-box;
+    width: 100%
 }
 
 .btn:hover {
@@ -113,6 +115,7 @@ select,
 textarea,
 button {
     font: inherit;
+    width: 100%
 }
 
 input,
@@ -167,4 +170,56 @@ h4 {
     display: flex;
     gap: 1rem;
 
+}
+
+.formContainer {
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(50%, 10%);
+    right: 50%;
+    top: 5%;
+    border: 2px solid var(--primary-color);
+    border-radius: 10%;
+    padding: 5rem;
+}
+.formContainer a {
+    color: var(--secondary-color);
+}
+.formContainer a:hover {
+    color: var(--primary-color);
+}
+
+.checkBox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--secondary-color); /* Blue color */
+}
+
+.checkbox-wrapper label {
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--primary-color);
+    user-select: none;
+}
+
+.lobsterFont {
+    font-family: "Lobster", sans-serif;
+    font-size: 42px;
+}
+
+.errorMessages {
+    color: #e74c3c;
 }
