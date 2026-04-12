@@ -5,7 +5,7 @@ function displayUserBooks(filteredBooks = null) {
   if (!booksContainer) return;
   booksContainer.innerHTML = "";
   if (booksToDisplay.length === 0) {
-    booksContainer.innerHTML = "<p>No books found.</p>";
+    booksContainer.innerHTML = "<p>No books found.</p";
     return;
   }
 
@@ -22,7 +22,7 @@ function displayUserBooks(filteredBooks = null) {
 }
 
 function setupUserSearch() {
-  const searchInput = document.getElementById("userSearchInput");
+  const searchInput = document.getElementById("searchInput");
   if (!searchInput) return;
   searchInput.addEventListener("input", (e) => {
   const searchTerm = e.target.value.toLowerCase();
