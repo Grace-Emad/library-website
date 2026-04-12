@@ -1,40 +1,49 @@
+/* Fixed responsive design to prevent microscopic text and broken layouts */
 
 @media (max-width: 72rem) {
-    html {
-        font-size: 80%;
+    .cards {
+        flex-wrap: wrap; /* Allow image cards to wrap naturally */
     }
 }
-
 
 @media (max-width: 51rem) {
-    html {
-        font-size: 72%;
+    .navbar {
+        flex-direction: column; /* Stack the navbar items on smaller screens */
+        gap: 15px;
     }
     .cards {
-        max-width: 800px;
-        flex-direction: column;
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
-
 @media (max-width: 43rem) {
-    html {
-        font-size: 56%
+    .img {
+        width: 120px; /* Shrink images gracefully for mobile */
     }
-    .img{
-        width: 100px;
+    .container {
+        margin: 10px;
+        padding: 15px;
     }
-    .cards {
-        max-width: 600px;
+    .pageOptions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 }
 
 @media (max-width: 34rem) {
-    html {
-        font-size: 37.5%;
+    .img {
+        width: 100px;
     }
-    .img{
-        width: 80px;
+    .logContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+    .logContainer .navbarBtns {
+        width: 100%;
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
     }
 }
