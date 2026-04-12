@@ -30,11 +30,12 @@ ul {
 }
 
 .container {
-    max-width: 700px;
-    margin: 20px auto;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
     background: white;
     border-radius: 8px;
+    box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -246,4 +247,31 @@ th {
 
 .errorMessages {
     color: #e74c3c;
+}
+
+.homeWelcome {
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.img {
+     max-width: 150px;
+     height: auto;
+     border-radius: 8px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     cursor: pointer;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+.img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }

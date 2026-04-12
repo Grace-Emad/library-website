@@ -1,0 +1,40 @@
+
+@media (max-width: 72rem) {
+    html {
+        font-size: 80%;
+    }
+}
+
+
+@media (max-width: 51rem) {
+    html {
+        font-size: 72%;
+    }
+    .cards {
+        max-width: 800px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 43rem) {
+    html {
+        font-size: 56%
+    }
+    .img{
+        width: 100px;
+    }
+    .cards {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 34rem) {
+    html {
+        font-size: 37.5%;
+    }
+    .img{
+        width: 80px;
+    }
+}
