@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8">
     <title>My Borrowed Books</title>
 </head>
 <body>
     <header>
-        <h1>Online Library</h1>
-        <nav>
-            <a href="../index.html">Home</a> | 
-            <a href="search_books.html">Search Books</a> |
-            <a href="user_borrowed.html">My Borrowed Books</a>
+        <nav class="navbar">
+            <b><a href="../indexUser.html">Online Library</a></b>
+            <ul class="pageOptions">
+                <li><a href="search_books.html">Search for Books</a></li>
+                <li><a href="book_details.html">Book Details</a></li>
+                <li><a href="user_borrowed.html">My Borrowed Books</a></li>
+            </ul>
+            <div id="userBeforeAuth" class="logContainer">
+                <button class="navbarBtns"><a href="login.html" >Login</a></button>
+                <button class="navbarBtns"><a href="signup.html" >Sign Up</a></button>
+            </div>
+            <div id="userAfterAuth" class="logContainer">
+                <p id="userAfterAuthPar"></p>
+                <button id="userLogOutBtn" class="navbarBtns">Log Out</button>
+            </div>
         </nav>
     </header>
     <main>
@@ -30,5 +41,6 @@
             </div>
         </section>
     </main>
+    <script src="../main.js"></script>
 </body>
 </html>

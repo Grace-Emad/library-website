@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Online Library - Home</title>
 </head>
 <body>
     <nav class="navbar">
-        <b>Online Library</b> |
-        <div id="adminBeforeAuth">
-            <a href="pages/login.html">Login</a> |
-            <a href="pages/signup.html">Sign Up</a>
+        <b>Online Library</b>
+        <ul class="pageOptions">
+            <li><a href="pages/admin_books.html">Manage Books</a></li>
+            <li><a href="pages/add_book.html">Add Book</a></li>
+        </ul>
+        <div id="adminBeforeAuth" class="logContainer">
+            <button><a href="pages/login.html" class="navbarBtns">Login</a></button>
+            <button><a href="pages/signup.html" class="navbarBtns">Sign Up</a></button>
         </div>
 
-        <div id="adminAfterAuth">
-            <p id="adminAfterAuthPar"></p>
-            <button id="adminLogOutBtn">Log Out</button>
+        <div id="adminAfterAuth" class="logContainer">
+            <button id="adminLogOutBtn" class="navbarBtns">Log Out</button>
         </div>
-
     </nav>
-    <hr>
 
     <main class="container">
         <h1>Welcome to the Online Library</h1>
         <p>Discover a world of knowledge. Search our catalog, borrow your favorite books, and manage your reading list all in one place.</p>
-        
-        <section>
-            <ul>
-                <li><a href="pages/admin_books.html">Manage Books</a></li>
-                <li><a href="pages/add_book.html">Add Book</a></li>
-            </ul>
-        </section>
+
     </main>
     <script src="main.js"></script>
 </body>
