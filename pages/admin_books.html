@@ -15,52 +15,24 @@
     </header>
     <main>
         <h2>Available & Borrowed Books</h2>
+        
+        <input type="text" id="searchInput" placeholder="Search for books...">
+        <br><br>
+
         <table border="1" cellpadding="10">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Book Title</th>
                     <th>Author</th>
                     <th>Category</th>
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Clean Code</td>
-                    <td>Robert C. Martin</td>
-                    <td>Technology</td>
-                    <td>
-                        <form action="edit_book.html" method="GET">
-                            <input type="hidden" name="book_id" value="1">
-                            <button type="submit">Edit Book</button>
-                        </form>
-                        <form action="#" method="POST">
-                            <input type="hidden" name="book_id" value="1">
-                            <button type="submit">Delete Book</button>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>The Pragmatic Programmer</td>
-                    <td>Andrew Hunt</td>
-                    <td>Technology</td>
-                    <td>
-                        <form action="edit_book.html" method="GET">
-                            <input type="hidden" name="book_id" value="2">
-                            <button type="submit">Edit Book</button>
-                        </form>
-                        <form action="#" method="POST">
-                            <input type="hidden" name="book_id" value="2">
-                            <button type="submit">Delete Book</button>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
+            <tbody id="tableBody">
+                </tbody>
         </table>
     </main>
-     <script src="../admin.js"></script>
+    
+    <script src="../js/admin.js"></script>
 </body>
 </html>
