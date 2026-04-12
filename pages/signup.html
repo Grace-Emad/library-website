@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="../css/style.css">
@@ -21,29 +24,28 @@
     <main class="container">
         <section class="form-container">
             <div class="headings">
-                <h2>Sign Up</h2>
+                <h2 class="lobsterFont">Sign Up</h2>
             </div>
             <form action="#" id="signUpForm">
-                <label for="username">Username: </label><br>
                 <input type="text" id="username" name="username" placeholder="Username" required class="formInput"><br><br>
 
-                <label for="password">Password: </label><br>
                 <input type="password" id="password" name="password" placeholder="Password" required minlength="6" class="formInput">
                 <br><br>
-                <label for="confPass">Confirm Password: </label><br>
-                <input type="password" id="confPass" name="confPass" placeholder="Password" required minlength="6" class="formInput">
+
+                <input type="password" id="confPass" name="confPass" placeholder="Confirm Password" required minlength="6" class="formInput">
                 <p id="confPassError" class="errorMessages" style="display:none; color: var(--error-color);"></p>
                 <br>
 
-                <label for="email">Email: </label><br>
                 <input type="email" id="email" name="email" placeholder="Email" required class="formInput">
                 <p id="emailError" class="errorMessages" style="display:none; color: var(--error-color);"></p>
                 <br>
 
-                <input type="checkbox" id="isAdmin" name="isAdmin">
-                <label for="isAdmin">Is Admin?</label>
-
+                <div class="checkbox-wrapper">
+                    <label for="isAdmin">is Admin</label>
+                    <input type="checkbox" id="isAdmin" name="isAdmin">
+                </div>
                 <br>
+
                 <p id="signUpError" class="errorMessages" style="display:none; color: var(--error-color);"></p>
 
                 <input type="submit" value="Sign Up" id="signUpSubmit" class="btn">
@@ -51,7 +53,6 @@
             </form>
         </section>
     </main>
-
     <script src="../js/auth.js"></script>
     <script src="../js/main.js"></script>
 </body>
