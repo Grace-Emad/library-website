@@ -82,15 +82,16 @@ if (editForm) {
     });
 }
 
-function displayAdminBooks() {
-    let books = JSON.parse(localStorage.getItem("books")) || [];
+function displayAdminBooks(filteredBooks = null) {
+    let allBooks = JSON.parse(localStorage.getItem("books")) || [];
+    let booksToDisplay = filteredBooks || allBooks;
     let tableBody = document.getElementById("tableBody");
 
     if (!tableBody) return;
 
     tableBody.innerHTML = "";
 
-    books.forEach((book, index) => {
+    booksToDisplay.forEach((book, index) => {
         let statusDisplay = book.status === 'available' ? 'Available' : 'Not Available';
         tableBody.innerHTML += `
             <tr>
@@ -99,11 +100,29 @@ function displayAdminBooks() {
                 <td>${book.category}</td>
                 <td>${statusDisplay}</td>
                 <td>
-                    <button class="btn" onclick="deleteBook(${index})">Delete</button>
-                    <button class="btn" onclick="editBook(${index})">Edit</button>
+                    <div style="display: flex; gap: 8px;">
+                        <button class="btn" onclick="deleteBook(${index})">Delete</button>
+                        <button class="btn" onclick="editBook(${index})">Edit</button>
+                    </div>
                 </td>
             </tr>
         `;
+    });
+}
+
+function setupAdminSearch() {
+    const searchInput = document.getElementById("searchInput");
+    if (!searchInput) return;
+
+    searchInput.addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        let allBooks = JSON.parse(localStorage.getItem("books")) || [];
+        const filtered = allBooks.filter(book =>
+            book.title.toLowerCase().includes(searchTerm) ||
+            book.author.toLowerCase().includes(searchTerm) ||
+            book.category.toLowerCase().includes(searchTerm)
+        );
+        displayAdminBooks(filtered);
     });
 }
 
@@ -121,4 +140,7 @@ function editBook(index) {
     window.location.href = "edit_book.html";
 }
 
-displayAdminBooks();
+document.addEventListener("DOMContentLoaded", () => {
+    displayAdminBooks();
+    setupAdminSearch();
+});

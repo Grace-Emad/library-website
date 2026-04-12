@@ -27,7 +27,6 @@ function renderNavigation() {
                 navLinks.innerHTML += `<li><a href="${pagesPrefix}add_book.html">Add Book</a></li>`;
             } else {
                 navLinks.innerHTML += `<li><a href="${pagesPrefix}search_books.html">Search for Books</a></li>`;
-                navLinks.innerHTML += `<li><a href="${pagesPrefix}book_details.html">Book Details</a></li>`;
                 navLinks.innerHTML += `<li><a href="${pagesPrefix}user_borrowed.html">My Borrowed Books</a></li>`;
             }
         }
