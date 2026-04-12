@@ -7,14 +7,13 @@
 <body>
     <nav class="navbar">
         <b>Online Library</b> |
-        <div id="adminBeforeAuth">
+        <div id="userBeforeAuth">
             <a href="pages/login.html">Login</a> |
             <a href="pages/signup.html">Sign Up</a>
         </div>
-
-        <div id="adminAfterAuth">
-            <p id="adminAfterAuthPar"></p>
-            <button id="adminLogOutBtn">Log Out</button>
+        <div id="userAfterAuth">
+            <p id="userAfterAuthPar"></p>
+            <button id="userLogOutBtn">Log Out</button>
         </div>
 
     </nav>
@@ -23,13 +22,16 @@
     <main class="container">
         <h1>Welcome to the Online Library</h1>
         <p>Discover a world of knowledge. Search our catalog, borrow your favorite books, and manage your reading list all in one place.</p>
-        
+
         <section>
+            <h2>Explore</h2>
             <ul>
-                <li><a href="pages/admin_books.html">Manage Books</a></li>
-                <li><a href="pages/add_book.html">Add Book</a></li>
+                <li><a href="pages/search_books.html">Search for Books</a></li>
+                <li><a href="pages/book_details.html">Book Details</a></li>
+                <li><a href="pages/user_borrowed.html">My Borrowed Books</a></li>
             </ul>
         </section>
+
     </main>
     <script src="main.js"></script>
 </body>

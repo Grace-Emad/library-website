@@ -8,27 +8,31 @@
     <header>
         <nav class="navbar">
             <b>Online Library</b> |
-            <a href="../index.html">Home</a>
+            <a href="../indexUser.html">Home</a>
         </nav>
         <hr><br>
     </header>
     <main>
-        <form action="#">
-            <label for="username">Username: </label>
-            <input type="text" id="username" name="username" placeholder="username" required><br><br>
-            <label for="password">Password: </label>
-            <input type="password" id="password" name="password" placeholder="password" required>
-            <br><br>
-            <input type="checkbox" id="remember" name="remember" value="Remember Me">
-            <label for="remember">Remember Me</label>
-            <br><br>
+        <section>
+            <h2>Login</h2>
+            <form id="loginForm" action="#">
+                <label for="username">Username: </label><br>
+                <input type="text" id="username" name="username" placeholder="username" required class="formInput"><br><br>
 
-            <input type="submit" value="Login">&emsp;
-            <a href="#">forget password?</a>
+                <label for="password">Password: </label><br>
+                <input type="password" id="password" name="password" placeholder="password" required class="formInput">
+                <br><br>
+                <p id="loginError" class="errorMessages"></p>
 
-            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
-        </form>
+                <input type="submit" value="Login" id="loginSubmit" class="btn">
+
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </form>
+        </section>
+
     </main>
+
+    <script src="../auth.js"></script>
 
 </body>
 </html>

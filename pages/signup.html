@@ -8,32 +8,42 @@
     <header>
         <nav class="navbar">
             <b>Online Library</b> |
-            <a href="../index.html">Home</a>
+            <a href="../indexUser.html">Home</a>
         </nav>
         <hr><br>
     </header>
     <main>
-        <form action="#">
-            <label for="username">Username: </label>
-            <input type="text" id="username" name="username" placeholder="Username" required><br><br>
-            <label for="password">Password: </label>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+        <div class="headings">
+            <h2>Sign Up</h2>
+        </div>
+        <form action="#" id="signUpForm">
+            <label for="username">Username: </label><br>
+            <input type="text" id="username" name="username" placeholder="Username" required class="formInput"><br><br>
+
+            <label for="password">Password: </label><br>
+            <input type="password" id="password" name="password" placeholder="Password" required class="formInput">
             <br><br>
-            <label for="confPass">Confirm Password: </label>
-            <input type="password" id="confPass" name="confPass" placeholder="Password" required>
+            <label for="confPass">Confirm Password: </label><br>
+            <input type="password" id="confPass" name="confPass" placeholder="Password" required class="formInput">
+            <p id="confPassError" class="errorMessages" style="display:none"></p>
             <br><br>
-            <label for="email">Email: </label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <br><br>
+
+            <label for="email">Email: </label><br>
+            <input type="email" id="email" name="email" placeholder="Email" required class="formInput">
+            <p id="emailError" class="errorMessages"></p>
 
             <input type="checkbox" id="isAdmin" name="isAdmin">
             <label for="isAdmin">Is Admin?</label>
 
-            <br><br>
-            <input type="submit" value="Sign Up">
+            <br>
+            <p id="signUpError" class="errorMessages"></p>
+
+            <input type="submit" value="Sign Up" id="signUpSubmit" class="btn">
             <p>Already have an account? <a href="login.html">Login</a></p>
         </form>
     </main>
+
+    <script src="../auth.js"></script>
 
 </body>
 </html>
