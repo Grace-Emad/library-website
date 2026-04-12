@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <title>Add Book</title>
 </head>
 
 <body>
-
     <nav class="navbar">
-        <b><a href="../index.html">Online Library</a></b>
-        <ul class="pageOptions">
-            <li><a href="admin_books.html">Manage Books</a></li>
-            <li><a href="add_book.html">Add Book</a></li>
-        </ul>
-        <div id="adminBeforeAuth" class="logContainer">
-            <button><a href="login.html" class="navbarBtns">Login</a></button>
-            <button><a href="signup.html" class="navbarBtns">Sign Up</a></button>
+        <b><a href="../index.html" style="color: inherit; text-decoration: none;">Online Library</a></b>
+        <ul class="pageOptions" id="navLinks"></ul>
+        <div id="beforeAuth" class="logContainer hidden">
+            <a href="login.html" class="navbarBtns">Login</a>
+            <a href="signup.html" class="navbarBtns">Sign Up</a>
         </div>
-
-        <div id="adminAfterAuth" class="logContainer">
-            <button id="adminLogOutBtn" class="navbarBtns">Log Out</button>
+        <div id="afterAuth" class="logContainer hidden">
+            <span id="userGreeting" style="margin-right: 15px;"></span>
+            <button id="logOutBtn" class="navbarBtns">Log Out</button>
         </div>
     </nav>
-<h2>Add New Book</h2>
 
-<form id="addBookForm">
+    <main class="container">
+        <section class="form-container">
+            <h2>Add New Book</h2>
+            <form id="addBookForm">
+                <label>Book Name</label><br>
+                <input type="text" name="bookName" class="formInput" required><br><br>
 
-    <label>Book Name</label><br>
-    <input type="text" name="bookName" required><br><br>
+                <label>Author</label><br>
+                <input type="text" name="author" class="formInput" required><br><br>
 
-    <label>Author</label><br>
-    <input type="text" name="author" required><br><br>
+                <label>Category</label><br>
+                <select name="category" class="formInput" required>
+                    <option value="">Choose Category</option>
+                    <option>Fiction</option>
+                    <option>Science</option>
+                    <option>History</option>
+                    <option>Technology</option>
+                </select><br><br>
 
-    <label>Category</label><br>
-    <select name="category" required>
-        <option value="">Choose Category</option>
-        <option>Fiction</option>
-        <option>Science</option>
-        <option>History</option>
-        <option>Technology</option>
-    </select><br><br>
+                <label>Description</label><br>
+                <textarea name="description" class="formInput" required></textarea><br><br>
 
-    <label>Description</label><br>
-    <textarea name="description" required></textarea><br><br>
+                <button type="submit" class="btn">Add Book</button>
+            </form>
+        </section>
+    </main>
 
-    <button type="submit">Add Book</button>
-
-</form>
-
-<script src="../admin.js"></script>
-    <script src="../main.js"></script>
-
+    <script src="../js/admin.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

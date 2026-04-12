@@ -3,47 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <b>Online Library</b> |
-            <a href="../indexUser.html">Home</a>
-        </nav>
-        <hr><br>
-    </header>
-    <main>
-        <div class="headings">
-            <h2>Sign Up</h2>
+    <nav class="navbar">
+        <b>Online Library</b>
+        <ul class="pageOptions" id="navLinks"></ul>
+        <div id="beforeAuth" class="logContainer hidden">
+            <a href="login.html" class="navbarBtns">Login</a>
+            <a href="signup.html" class="navbarBtns">Sign Up</a>
         </div>
-        <form action="#" id="signUpForm">
-            <label for="username">Username: </label><br>
-            <input type="text" id="username" name="username" placeholder="Username" required class="formInput"><br><br>
+        <div id="afterAuth" class="logContainer hidden">
+            <span id="userGreeting" style="margin-right: 15px;"></span>
+            <button id="logOutBtn" class="navbarBtns">Log Out</button>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="form-container">
+            <div class="headings">
+                <h2>Sign Up</h2>
+            </div>
+            <form action="#" id="signUpForm">
+                <label for="username">Username: </label><br>
+                <input type="text" id="username" name="username" placeholder="Username" required class="formInput"><br><br>
 
-            <label for="password">Password: </label><br>
-            <input type="password" id="password" name="password" placeholder="Password" required class="formInput">
-            <br><br>
-            <label for="confPass">Confirm Password: </label><br>
-            <input type="password" id="confPass" name="confPass" placeholder="Password" required class="formInput">
-            <p id="confPassError" class="errorMessages" style="display:none"></p>
-            <br><br>
+                <label for="password">Password: </label><br>
+                <input type="password" id="password" name="password" placeholder="Password" required minlength="6" class="formInput">
+                <br><br>
+                <label for="confPass">Confirm Password: </label><br>
+                <input type="password" id="confPass" name="confPass" placeholder="Password" required minlength="6" class="formInput">
+                <p id="confPassError" class="errorMessages" style="display:none; color: var(--error-color);"></p>
+                <br>
 
-            <label for="email">Email: </label><br>
-            <input type="email" id="email" name="email" placeholder="Email" required class="formInput">
-            <p id="emailError" class="errorMessages"></p>
+                <label for="email">Email: </label><br>
+                <input type="email" id="email" name="email" placeholder="Email" required class="formInput">
+                <p id="emailError" class="errorMessages" style="display:none; color: var(--error-color);"></p>
+                <br>
 
-            <input type="checkbox" id="isAdmin" name="isAdmin">
-            <label for="isAdmin">Is Admin?</label>
+                <input type="checkbox" id="isAdmin" name="isAdmin">
+                <label for="isAdmin">Is Admin?</label>
 
-            <br>
-            <p id="signUpError" class="errorMessages"></p>
+                <br>
+                <p id="signUpError" class="errorMessages" style="display:none; color: var(--error-color);"></p>
 
-            <input type="submit" value="Sign Up" id="signUpSubmit" class="btn">
-            <p>Already have an account? <a href="login.html">Login</a></p>
-        </form>
+                <input type="submit" value="Sign Up" id="signUpSubmit" class="btn">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </form>
+        </section>
     </main>
 
-    <script src="../auth.js"></script>
-
+    <script src="../js/auth.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

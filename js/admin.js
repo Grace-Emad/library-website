@@ -2,9 +2,6 @@ if (!localStorage.getItem("books")) {
     localStorage.setItem("books", JSON.stringify([]));
 }
 
-// =======================
-// ADD BOOK
-// =======================
 let addForm = document.getElementById("addBookForm");
 if (addForm) {
     addForm.addEventListener("submit", function(e) {
@@ -34,9 +31,6 @@ if (addForm) {
     });
 }
 
-// =======================
-// EDIT BOOK
-// =======================
 let editForm = document.getElementById("editBookForm");
 if (editForm) {
     const editIndex = localStorage.getItem("editIndex");
@@ -88,9 +82,6 @@ if (editForm) {
     });
 }
 
-// =======================
-// DISPLAY BOOKS
-// =======================
 function displayAdminBooks() {
     let books = JSON.parse(localStorage.getItem("books")) || [];
     let tableBody = document.getElementById("tableBody");
@@ -100,23 +91,22 @@ function displayAdminBooks() {
     tableBody.innerHTML = "";
 
     books.forEach((book, index) => {
+        let statusDisplay = book.status === 'available' ? 'Available' : 'Not Available';
         tableBody.innerHTML += `
             <tr>
                 <td>${book.title}</td>
                 <td>${book.author}</td>
                 <td>${book.category}</td>
+                <td>${statusDisplay}</td>
                 <td>
-                    <button onclick="deleteBook(${index})">Delete</button>
-                    <button onclick="editBook(${index})">Edit</button>
+                    <button class="btn" onclick="deleteBook(${index})">Delete</button>
+                    <button class="btn" onclick="editBook(${index})">Edit</button>
                 </td>
             </tr>
         `;
     });
 }
 
-// =======================
-// DELETE BOOK
-// =======================
 function deleteBook(index) {
     if (confirm("Are you sure you want to delete this book?")) {
         let books = JSON.parse(localStorage.getItem("books")) || [];
@@ -126,9 +116,6 @@ function deleteBook(index) {
     }
 }
 
-// =======================
-// EDIT BOOK - Redirect
-// =======================
 function editBook(index) {
     localStorage.setItem("editIndex", index);
     window.location.href = "edit_book.html";
