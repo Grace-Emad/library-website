@@ -4,6 +4,12 @@
     .cards {
         flex-wrap: wrap; /* Allow image cards to wrap naturally */
     }
+    .footer {
+        margin: 0 auto;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 51rem) {
@@ -15,6 +21,7 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
 }
 
 @media (max-width: 43rem) {
@@ -30,6 +37,7 @@
         justify-content: center;
         gap: 15px;
     }
+
 }
 
 @media (max-width: 34rem) {

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/queries.css">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
     <meta charset="UTF-8">
     <title>Online Library - Home</title>
 </head>
 <body>
     <nav class="navbar">
-        <b>Online Library</b>
+        <div class="iconName">
+            <img src="images/icon.png" alt="icon" width="30px">
+            <b>Online Library</b>
+        </div>
         <ul class="pageOptions" id="navLinks">
             <!-- Dynamically injected links based on role -->
         </ul>
@@ -24,10 +27,10 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="homeContainer">
         <div class="homeWelcome">
             <h1>Welcome to the Online Library</h1>
-            <p>Discover a world of knowledge. Search our catalog, borrow your favorite books, and manage your reading list all in one place.</p>
+            <p class="headerText">Discover a world of knowledge. Search our catalog, borrow your favorite books, and manage your reading list all in one place.</p>
         </div>
         <div class="cards">
             <a href="pages/search_books.html">
@@ -49,6 +52,19 @@
         </div>
     </main>
     <footer>
+        <div class="footer">
+            <div class="iconName">
+                <img src="images/icon.png" alt="icon" width="30px">
+                <b>Online Library</b>
+            </div>
+            <p>@2026 FCAI. all rights reserved </p>
+            <p>Terms of Services</p>
+            <div class="socialMediaIcons">
+                <img src="images/facebook.png" alt="Facebook icon" width="40px">
+                <img src="images/twitter.png" alt="Twitter icon" width="30px">
+                <img src="images/instagram.png" alt="Instagram icon" width="30px">
+            </div>
+        </div>
 
     </footer>
     <script src="js/main.js"></script>

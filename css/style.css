@@ -29,14 +29,33 @@ ul {
     margin: 0;
 }
 
+h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.headerText {
+    font-size: 20px;
+}
+
 .container {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
     padding: 20px;
     background: white;
     border-radius: 8px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#homeContainer {
+    min-height: 80vh;
 }
 
 .navbar {
@@ -251,6 +270,7 @@ th {
 
 .homeWelcome {
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .cards {
@@ -259,6 +279,7 @@ th {
     align-items: center;
     gap: 20px;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .img {
@@ -274,4 +295,32 @@ th {
     transform: scale(1.1);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     z-index: 10;
+}
+
+.iconName{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.socialMediaIcons {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+}
+.footer {
+    position: relative;
+    margin: 0 16rem;
+    display: flex;
+    gap: 0.5rem;
+    padding: 3.5rem;
+    align-items: center;
 }
