@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="iconName">
             <img src="{% static 'images/icon.png' %}" alt="icon" width="30px">
@@ -22,6 +24,8 @@
             <a href="{% url 'signup' %}" class="navbarBtns">Sign Up</a>
         </div>
     </nav>
+
+    <!-- Content -->
     <main class="container">
 
         <div id="book-details-container">
@@ -37,6 +41,7 @@
     <script src="{% static 'js/main.js' %}"></script>
 
     <script>
+      
         const params = new URLSearchParams(window.location.search);
         const bookId = params.get("id");
 
@@ -58,6 +63,8 @@
                             ${data.available ? "Available" : "Not Available"}
                         </p>
                     `;
+
+                    
                     if (data.available) {
                         document.getElementById("borrow-section").innerHTML = `
                             <button onclick="borrowBook(${bookId})">
@@ -67,6 +74,8 @@
                     }
                 });
         }
+
+         
         function borrowBook(id) {
             fetch(`/api/borrow/${id}/`, {
                 method: "POST"
